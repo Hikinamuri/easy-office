@@ -1,0 +1,1306 @@
+<!DOCTYPE html>
+<html lang="ru">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Easy Office - Управление коммерческой недвижимостью</title>
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap"
+            rel="stylesheet"
+        />
+        <link rel="stylesheet" href="style.css" />
+        <script
+            src="https://kit.fontawesome.com/your-fontawesome-kit.js"
+            crossorigin="anonymous"
+        ></script>
+    </head>
+    <body>
+        <!-- Header with Navigation -->
+        <header class="site-header">
+            <div class="container header-container">
+                <div class="logo-container">
+                    <img
+                        class="company-logo"
+                        src="images/logo_light.png"
+                        alt="Easy Office Logo"
+                    />
+                    <div class="logo-text">
+                        <div class="company-description">
+                            управление коммерческой недвижимостью
+                        </div>
+                    </div>
+                </div>
+
+                <button class="menu-toggle" id="menuToggle">
+                    <i class="fas fa-bars">≡</i>
+                </button>
+
+                <nav class="main-nav" id="mainNav">
+                    <button class="menu-close" id="menuClose">
+                        <i class="fas fa-times"></i>
+                    </button>
+                    <ul>
+                        <li><a href="#services">Услуги</a></li>
+                        <li><a href="#benefits">Преимущества</a></li>
+                        <li><a href="#cases">Кейсы</a></li>
+                        <li><a href="#process">Как работаем</a></li>
+                        <li><a href="#guarantees">Гарантии</a></li>
+                        <li><a href="#reviews">Отзывы</a></li>
+                        <li><a href="#contact">Контакты</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </header>
+
+        <!-- Hero Section -->
+        <section class="hero">
+            <div class="container hero-container">
+                <div class="hero-content">
+                    <h1 class="hero-main-heading">
+                        ЛЕГКО ПРЕВРАТИМ ВАШУ КОММЕРЧЕСКУЮ НЕДВИЖИМОСТЬ <br />
+                        <span class="highlight">В ПРИБЫЛЬНЫЙ АКТИВ</span>
+                    </h1>
+                    <p class="hero-description">
+                        Полный комплекс услуг по управлению коммерческой
+                        недвижимостью. Освободим вас от рутины, увеличим
+                        доходность вашего актива.
+                    </p>
+                    <div class="hero-cta">
+                        <button class="btn" onclick="openModal('consultation')">
+                            Получить консультацию
+                        </button>
+                        <button
+                            class="btn btn-outline"
+                            onclick="openModal('analysis')"
+                        >
+                            Анализ объекта
+                        </button>
+                    </div>
+                </div>
+            </div>
+            <div class="container">
+                <div class="hero-categories">
+                    <span class="hero-category">ОФИСНАЯ</span>
+                    <span class="hero-category">ТОРГОВАЯ</span>
+                    <span class="hero-category">СКЛАДСКАЯ</span>
+                    <span class="hero-category">ПРОИЗВОДСТВЕННАЯ</span>
+                    <span class="hero-category">ЗЕМЕЛЬНЫЕ УЧАСТКИ</span>
+                </div>
+            </div>
+        </section>
+
+        <!-- Pains Section -->
+        <section class="section section-light pains">
+            <div class="container">
+                <div class="section-heading1">
+                    <h2>БОЛИ СОБСТВЕННИКА</h2>
+                </div>
+                <div class="pains-content">
+                    <div class="pains-text">
+                        <p>
+                            Управление коммерческой недвижимостью отнимает много
+                            времени и сил, отвлекая от основного бизнеса.
+                        </p>
+
+                        <ul class="pains-list">
+                            <li>
+                                <i class="fas fa-phone"></i>
+                                <span
+                                    >Телефон звонит круглосуточно по каждому
+                                    вопросу</span
+                                >
+                            </li>
+                            <li>
+                                <i class="fas fa-file-invoice"></i>
+                                <span
+                                    >Сдача отчётности горит, налоги нужно
+                                    платить вовремя</span
+                                >
+                            </li>
+                            <li>
+                                <i class="fas fa-tint"></i>
+                                <span
+                                    >В помещении течёт туалет, ломается
+                                    кондиционер</span
+                                >
+                            </li>
+                            <li>
+                                <i class="fas fa-money-bill-wave"></i>
+                                <span
+                                    >Арендаторы задерживают платежи, копится
+                                    дебиторка</span
+                                >
+                            </li>
+                            <li>
+                                <i class="fas fa-question"></i>
+                                <span
+                                    >Не знаете, за что хвататься в первую
+                                    очередь</span
+                                >
+                            </li>
+                        </ul>
+
+                        <p>
+                            Мы берем на себя всю работу по управлению
+                            недвижимостью и все ваши обязательства перед
+                            арендаторами. Ваше участие будет заключаться только
+                            в получении оплаты. Остальное делаем мы.
+                        </p>
+                    </div>
+                    <div class="pains-image">
+                        <img
+                            src="images/Pain.png"
+                            alt="Проблемы управления недвижимостью"
+                        />
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Services Section -->
+        <section id="services" class="section section-dark services">
+            <div class="container">
+                <div class="section-heading">
+                    <h2>ЧТО МЫ БЕРЁМ НА СЕБЯ</h2>
+                </div>
+                <div class="icons-grid">
+                    <div class="icon-block">
+                        <img
+                            src="images/day.png"
+                            alt="Сдача в течение двух месяцев"
+                            class="icon-img"
+                        />
+                        <h3>Сдача в течение двух месяцев</h3>
+                        <p>Гарантированно сдадим ваше помещение в аренду</p>
+                    </div>
+                    <div class="icon-block">
+                        <img
+                            src="images/like.png"
+                            alt="Выплата аренды день-в-день"
+                            class="icon-img"
+                        />
+                        <h3>Выплата аренды день-в-день</h3>
+                        <p>Вы получаете платежи точно в срок без задержек</p>
+                    </div>
+                    <div class="icon-block">
+                        <img
+                            src="images/peoples.png"
+                            alt="Все контакты с арендаторами"
+                            class="icon-img"
+                        />
+                        <h3>Все контакты с арендаторами</h3>
+                        <p>Берём на себя все коммуникации с арендаторами</p>
+                    </div>
+                    <div class="icon-block">
+                        <img
+                            src="images/human.png"
+                            alt="Взаимодействие с коммунальщиками"
+                            class="icon-img"
+                        />
+                        <h3>Взаимодействие с коммунальщиками</h3>
+                        <p>Решаем все вопросы с поставщиками услуг</p>
+                    </div>
+                    <div class="icon-block">
+                        <img
+                            src="images/settings.png"
+                            alt="Все хозяйственные вопросы"
+                            class="icon-img"
+                        />
+                        <h3>Все хозяйственные вопросы</h3>
+                        <p>Ремонт, обслуживание, текущие проблемы</p>
+                    </div>
+                    <div class="icon-block">
+                        <img
+                            src="images/document.png"
+                            alt="Бухгалтерское сопровождение"
+                            class="icon-img"
+                        />
+                        <h3>Бухгалтерское сопровождение</h3>
+                        <p>Ведём всю необходимую документацию и отчётность</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Benefits Section -->
+        <section id="benefits" class="section section-light benefits">
+            <div class="container">
+                <div class="section-heading1">
+                    <h2>ЧТО ПОЛУЧАЕТЕ ВЫ</h2>
+                </div>
+                <div class="icons-grid">
+                    <div class="icon-block">
+                        <img
+                            src="images/benefit6.png"
+                            alt="Свобода от рутины"
+                            class="icon-img"
+                        />
+                        <h3>Помещения сданы максимально выгодно</h3>
+                        <p class="sub">
+                            Мы управляем недвижимостью с 2006 года и умеем
+                            сдавать объекты по верхней рыночной цене.
+                        </p>
+                    </div>
+                    <div class="icon-block">
+                        <img
+                            src="images/benefit6.png"
+                            alt="Свобода от рутины"
+                            class="icon-img"
+                        />
+                        <h3>Любые вопросы решаются мгновенно</h3>
+                        <p class="sub">
+                            Мы закрепляем за объектом персонального менеджера,
+                            который всегда на связи.
+                        </p>
+                    </div>
+                    <div class="icon-block">
+                        <img
+                            src="images/benefit6.png"
+                            alt="Свобода от рутины"
+                            class="icon-img"
+                        />
+                        <h3>Ваша недвижимость в полном порядке</h3>
+                        <p class="sub">
+                            Регулярный мониторинг объекта и поддержание в
+                            оптимальном техническом состоянии.
+                        </p>
+                    </div>
+                    <div class="icon-block">
+                        <img
+                            src="images/benefit6.png"
+                            alt="Свобода от рутины"
+                            class="icon-img"
+                        />
+                        <h3>Мы готовы действовать в любом формате</h3>
+                        <p class="sub">
+                            Полное управление, аренда с правом субаренды, чистый
+                            брокеридж.
+                        </p>
+                    </div>
+                    <div class="icon-block">
+                        <img
+                            src="images/benefit6.png"
+                            alt="Свобода от рутины"
+                            class="icon-img"
+                        />
+                        <h3>Аренда оплачена вовремя и в полном объеме</h3>
+                        <p class="sub">
+                            Вы получаете деньги с нас. Как мы выстраиваем работу
+                            с арендаторами - это наша забота.
+                        </p>
+                    </div>
+                    <div class="icon-block">
+                        <img
+                            src="images/benefit6.png"
+                            alt="Свобода от рутины"
+                            class="icon-img"
+                        />
+                        <h3>Вы просто владеете, а мы легко управляем</h3>
+                        <p class="sub">
+                            Освободим вас от рутины в управлении недвижимостью.
+                        </p>
+                    </div>
+                </div>
+                <div class="cta-buttons1">
+                    <button class="btn" onclick="openModal('consultation')">
+                        Получить консультацию
+                    </button>
+                </div>
+            </div>
+        </section>
+
+        <!-- Cases Section -->
+        <section id="cases" class="section section-dark cases">
+            <div class="container">
+                <div class="section-heading">
+                    <h2>КЕЙСЫ ДЛЯ ВДОХНОВЕНИЯ</h2>
+                </div>
+
+                <div class="cases-container">
+                    <div class="cases-grid">
+                        <div class="case-card">
+                            <div class="case-before-after">
+                                <div class="ba-image before">
+                                    <div class="case-number">1</div>
+                                    <img
+                                        src="images/case1_before.png"
+                                        alt="До"
+                                    />
+                                    <span>До</span>
+                                </div>
+                                <div class="ba-image after">
+                                    <img
+                                        src="images/case1_after.png"
+                                        alt="После"
+                                    />
+                                    <span>После</span>
+                                </div>
+                            </div>
+                            <div class="case-content">
+                                <h3 class="case-title">Чистопольская, 66</h3>
+                                <div class="case-description">
+                                    <p>
+                                        Помещение не сдавалось более двух лет.
+                                        Собственник пытался сдать объект как
+                                        готовый бизнес, не учитывая рыночные
+                                        реалии. Упущенная прибыль - 2,5 млн.
+                                    </p>
+                                    <p>
+                                        Мы избавились от архаичного интерьера,
+                                        поменяли дизайн, сделали функциональную
+                                        планировку.
+                                    </p>
+                                </div>
+                                <div class="case-result">
+                                    <p>
+                                        <strong>РЕЗУЛЬТАТ:</strong> Помещение
+                                        сдано за 110 000 рублей в месяц.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="case-card">
+                            <div class="case-before-after">
+                                <div class="ba-image before">
+                                    <div class="case-number">2</div>
+                                    <img
+                                        src="images/case2_before.png"
+                                        alt="До"
+                                    />
+                                    <span>До</span>
+                                </div>
+                                <div class="ba-image after">
+                                    <img
+                                        src="images/case2_after.png"
+                                        alt="После"
+                                    />
+                                    <span>После</span>
+                                </div>
+                            </div>
+                            <div class="case-content">
+                                <h3 class="case-title">Большая Красная, 42</h3>
+                                <div class="case-description">
+                                    <p>
+                                        Помещение не приносило доход и
+                                        разрушалось.
+                                    </p>
+                                    <p>
+                                        Мы ободрали вагонку, сделали
+                                        перепланировку, оборудовали санузел,
+                                        прорубили окна и дополнительный вход,
+                                        провели вентиляцию, сменили двери и
+                                        отделку.
+                                    </p>
+                                </div>
+                                <div class="case-result">
+                                    <p>
+                                        <strong>РЕЗУЛЬТАТ:</strong> Арендатор
+                                        найден за месяц. Помещение сдаётся
+                                        непрерывно уже 14 лет. Ежемесячный доход
+                                        собственника - 50 000 рублей.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="case-card">
+                            <div class="case-before-after">
+                                <div class="ba-image before">
+                                    <div class="case-number">3</div>
+                                    <img
+                                        src="images/case3_before.png"
+                                        alt="До"
+                                    />
+                                    <span>До</span>
+                                </div>
+                                <div class="ba-image after">
+                                    <img
+                                        src="images/case3_after.png"
+                                        alt="После"
+                                    />
+                                    <span>После</span>
+                                </div>
+                            </div>
+                            <div class="case-content">
+                                <h3 class="case-title">Адоратского, 3а</h3>
+                                <div class="case-description">
+                                    <p>
+                                        Цоколь в отличной ЛИКВИДНОЙ локации не
+                                        сдавался более года из-за чудовищного
+                                        состояния помещения. Мы инвестировали
+                                        более 400 000 в перепланировку, заменили
+                                        двери, установили приточную и вытяжную
+                                        вентиляцию, подняли потолок. Сделали
+                                        ремонт.
+                                    </p>
+                                </div>
+                                <div class="case-result">
+                                    <p>
+                                        <strong>РЕЗУЛЬТАТ:</strong> Помещение
+                                        сдано в течение одного месяца с арендной
+                                        платой на 30% выше изначальной суммы.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="case-card">
+                            <div class="case-before-after">
+                                <div class="ba-image before">
+                                    <div class="case-number">4</div>
+                                    <img
+                                        src="images/case4_before.png"
+                                        alt="До"
+                                    />
+                                    <span>До</span>
+                                </div>
+                                <div class="ba-image after">
+                                    <img
+                                        src="images/case4_after.png"
+                                        alt="После"
+                                    />
+                                    <span>После</span>
+                                </div>
+                            </div>
+                            <div class="case-content">
+                                <h3 class="case-title">Куюки, Олимпийская, 6</h3>
+                                <div class="case-description">
+                                    <p>
+                                        Мы любим и умеем работать с небольшими объектами. Но и крупные проекты нам удаются не хуже!
+                                        Торговым центром «Куюки» мы занимались на всех этапах: от строительства и разработки концепции до привлечения арендаторов и текущего управления. 
+                                    </p>
+                                </div>
+                                <div class="case-result">
+                                    <p>
+                                        <strong>РЕЗУЛЬТАТ:</strong> Собственник
+                                        Объект построен за год. Площади в течение 5 месяцев на 100% заполнены арендаторами.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="case-card">
+                            <div class="case-before-after">
+                                <div class="ba-image before">
+                                    <div class="case-number">5</div>
+                                    <img
+                                        src="images/case5_before.png"
+                                        alt="До"
+                                    />
+                                    <span>До</span>
+                                </div>
+                                <div class="ba-image after">
+                                    <img
+                                        src="images/case5_after.png"
+                                        alt="После"
+                                    />
+                                    <span>После</span>
+                                </div>
+                            </div>
+                            <div class="case-content">
+                                <h3 class="case-title">Чуйкова, 2г</h3>
+                                <div class="case-description">
+                                    <p>
+                                        Мансарда сдавалась как жилое помещение и
+                                        приносила собственнику минимальный
+                                        доход. Мы разделили помещение на две
+                                        части (прорублен второй вход),
+                                        установили перегородки, отремонтировали,
+                                        заменили освещение на светодиодное.
+                                    </p>
+                                </div>
+                                <div class="case-result">
+                                    <p>
+                                        <strong>РЕЗУЛЬТАТ:</strong> Чистый доход
+                                        собственника вырос на 70% даже с учётом
+                                        расходов на управление.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="case-card">
+                            <div class="case-before-after">
+                                <div class="ba-image before">
+                                    <div class="case-number">6</div>
+                                    <img
+                                        src="images/case6_before.png"
+                                        alt="До"
+                                    />
+                                    <span>До</span>
+                                </div>
+                                <div class="ba-image after">
+                                    <img
+                                        src="images/case6_after.png"
+                                        alt="После (соединенные фото)"
+                                    />
+                                    <span>После</span>
+                                </div>
+                            </div>
+                            <div class="case-content">
+                                <h3 class="case-title">
+                                    пр-кт Ф. Амирхана, 21, 76 м²
+                                </h3>
+                                <div class="case-description">
+                                    <p>
+                                        Собственник год не мог найти арендатора.
+                                        В помещении не было коммуникаций,
+                                        «уставший интерьер».
+                                    </p>
+                                    <p>
+                                        Мы договорились с собственником, что
+                                        общее пространство будет разделено на
+                                        два помещения. Сделали качественный
+                                        ремонт (учитывая высоту потолков 6
+                                        метров). Были оборудованы принудительные
+                                        вытяжка и вентиляция.
+                                    </p>
+                                </div>
+                                <div class="case-result">
+                                    <p>
+                                        <strong>РЕЗУЛЬТАТ:</strong> 2 помещения
+                                        были сданы на длительный срок.
+                                        Собственник получает стабильную арендную
+                                        плату в 1,5 раза выше, чем с предыдущего
+                                        арендатора.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="cases-arrows">
+                        <button
+                            class="arrow-btn prev-case"
+                            onclick="moveCases(-1)"
+                        >
+                            <i class="fas fa-chevron-left">&lt;</i>
+                        </button>
+                        <button
+                            class="arrow-btn next-case"
+                            onclick="moveCases(1)"
+                        >
+                            <i class="fas fa-chevron-right">&gt;</i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Process Section -->
+        <section id="process" class="section section-light process">
+            <div class="container">
+                <div class="section-heading1">
+                    <h2>КАК МЫ РАБОТАЕМ</h2>
+                </div>
+                <div class="icons-grid">
+                    <div class="icon-block">
+                        <img
+                            src="images/work1.png"
+                            alt="Анализ объекта"
+                            class="icon-img"
+                        />
+                        <h3>Анализ объекта, локации и конкурентов</h3>
+                        <p>1. Проводим детальный анализ вашего объекта</p>
+                    </div>
+                    <div class="icon-block">
+                        <img
+                            src="images/work2.png"
+                            alt="Разработка концепции"
+                            class="icon-img"
+                        />
+                        <h3>Разработка, утверждение концепции</h3>
+                        <p>2. Создаем оптимальную концепцию использования</p>
+                    </div>
+                    <div class="icon-block">
+                        <img
+                            src="images/work3.png"
+                            alt="Подписание договора"
+                            class="icon-img"
+                        />
+                        <h3>Подписание договора с собственником</h3>
+                        <p>3. Заключаем прозрачный договор</p>
+                    </div>
+                    <div class="icon-block">
+                        <img
+                            src="images/work4.png"
+                            alt="Улучшение помещений"
+                            class="icon-img"
+                        />
+                        <h3>Улучшение помещений объекта</h3>
+                        <p>4. Проводим необходимые работы за наш счет</p>
+                    </div>
+                    <div class="icon-block">
+                        <img
+                            src="images/work5.png"
+                            alt="Поиск арендаторов"
+                            class="icon-img"
+                        />
+                        <h3>Поиск и размещение арендаторов</h3>
+                        <p>5. Находим надежных арендаторов</p>
+                    </div>
+                    <div class="icon-block">
+                        <img
+                            src="images/work6.png"
+                            alt="Эксплуатация объекта"
+                            class="icon-img"
+                        />
+                        <h3>Эксплуатация объекта</h3>
+                        <p>6. Обеспечиваем бесперебойную работу</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Guarantees Section -->
+        <section id="guarantees" class="section section-dark guarantees">
+            <div class="container">
+                <div class="section-heading">
+                    <h2>ТРИ ЖЕЛЕЗНЫЕ ГАРАНТИИ ДЛЯ СОБСТВЕННИКА</h2>
+                </div>
+                <div class="icons-grid">
+                    <div class="icon-block">
+                        <img
+                            src="images/iron.png"
+                            alt="Гарантия минимальных расходов"
+                            class="icon-img"
+                        />
+                        <h3>Гарантия минимальных расходов</h3>
+                        <p class="sub">
+                            Все улучшения помещения: перепланировки, ремонт,
+                            смена концепции - за счет нашей компании. Возврат
+                            этих инвестиций - только из арендной платы.
+                        </p>
+                    </div>
+                    <div class="icon-block">
+                        <img
+                            src="images/iron.png"
+                            alt="Гарантия быстрой сдачи"
+                            class="icon-img"
+                        />
+                        <h3>Гарантия быстрой сдачи</h3>
+                        <p class="sub">
+                            Мы гарантируем 100% заполняемость объекта
+                            арендаторами в течение 2 месяцев. Если нет, мы
+                            выплачиваем недостающую арендную плату сами.
+                        </p>
+                    </div>
+                    <div class="icon-block">
+                        <img
+                            src="images/iron.png"
+                            alt="Гарантия сохранности объекта"
+                            class="icon-img"
+                        />
+                        <h3>Гарантия сохранности объекта</h3>
+                        <p class="sub">
+                            Лучший источник уверенности - это страховой полис.
+                            Мы страхуем ваше помещение. Полностью за наш счет.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Brokers Section -->
+        <section id="brokers" class="section section-light brokers">
+            <div class="container">
+                <div class="section-heading1">
+                    <h2>СОТРУДНИЧЕСТВО С БРОКЕРАМИ</h2>
+                </div>
+
+                <div class="brokers-content">
+                    <p class="text-center mb-4">
+                        Мы открыты для сотрудничества с риелторами и брокерами!
+                        Предлагаем выгодные условия партнерства и комиссионные.
+                    </p>
+
+                    <div class="icons-grid">
+                        <div class="icon-block">
+                            <i class="fas fa-check-circle fa-3x"></i>
+                            <h3>Оперативное рассмотрение</h3>
+                            <p>Быстро оцениваем объекты и принимаем решения</p>
+                        </div>
+                        <div class="icon-block">
+                            <i class="fas fa-handshake fa-3x"></i>
+                            <h3>Прозрачные условия</h3>
+                            <p>Четкие и понятные условия сотрудничества</p>
+                        </div>
+                        <div class="icon-block">
+                            <i class="fas fa-money-bill-wave fa-3x"></i>
+                            <h3>Своевременные выплаты</h3>
+                            <p>Комиссионные выплачиваем точно в срок</p>
+                        </div>
+                    </div>
+
+                    <div class="brokers-contact"></div>
+
+                    <div class="text-center" style="margin-top: 30px">
+                        <button class="btn" onclick="openModal('brokers')">
+                            Обсудить сотрудничество
+                        </button>
+                        <button
+                            class="btn btn-outline"
+                            onclick="openModal('analysis')"
+                        >
+                            Получить анализ объекта
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Reviews Section -->
+        <section id="reviews" class="section section-dark reviews">
+            <div class="container">
+                <div class="section-heading">
+                    <h2>ОТЗЫВЫ КЛИЕНТОВ</h2>
+                </div>
+
+                <div class="reviews-slider">
+                    <div class="reviews-track" id="reviewsTrack">
+                        <div class="review-card">
+                            <div class="review-text">
+                                "Спасибо команде Easy Office за профессиональную
+                                работу! Мой офисный центр теперь приносит
+                                стабильный доход, а я избавился от головной боли
+                                с арендаторами и ремонтом."
+                            </div>
+                            <div class="review-author">
+                                — Сергей Иванов, владелец бизнес-центра
+                            </div>
+                        </div>
+                        <div class="review-card">
+                            <div class="review-text">
+                                "Работаем с Easy Office уже более 5 лет. За это
+                                время доходность нашего торгового помещения
+                                выросла на 40%. Всегда оперативное решение любых
+                                вопросов."
+                            </div>
+                            <div class="review-author">
+                                — Анна Петрова, собственник торговой площади
+                            </div>
+                        </div>
+                        <div class="review-card">
+                            <div class="review-text">
+                                "Рекомендую как надежного управляющего
+                                коммерческой недвижимостью. Сделали качественный
+                                ремонт, нашли арендаторов быстро и по хорошей
+                                цене."
+                            </div>
+                            <div class="review-author">
+                                — Дмитрий Смирнов, инвестор в недвижимость
+                            </div>
+                        </div>
+                        <div class="review-card">
+                            <div class="review-text">
+                                "Отличный сервис! Всегда на связи, решают
+                                вопросы оперативно. Доходность моего объекта
+                                выросла на 25% после передачи в управление Easy
+                                Office."
+                            </div>
+                            <div class="review-author">
+                                — Ольга Кузнецова, владелец складского комплекса
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="cases-arrows">
+                    <button
+                        class="arrow-btn prev-review"
+                        onclick="moveReviews(-1)"
+                    >
+                        <i class="fas fa-chevron-left">&lt;</i>
+                    </button>
+                    <button
+                        class="arrow-btn next-review"
+                        onclick="moveReviews(1)"
+                    >
+                        <i class="fas fa-chevron-right">&gt;</i>
+                    </button>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section id="contact" class="section section-light contact">
+            <div class="container">
+                <div class="section-heading1">
+                    <h2>КОНТАКТЫ</h2>
+                </div>
+
+                <div class="contact-container">
+                    <div class="contact-info">
+                        <div class="contact-item">
+                            <div class="contact-icon">
+                                <img
+                                    src="./images/adress.png"
+                                    alt=""
+                                    srcset=""
+                                />
+                                <i class="fas fa-map-marker-alt"></i>
+                            </div>
+                            <div class="contact-details">
+                                <p><strong>Адрес:</strong></p>
+                                <p>
+                                    420126 г.Казань, пр-кт Ф.Амирхана, 21, 2
+                                    этаж
+                                </p>
+                            </div>
+                        </div>
+
+                        <div class="contact-item">
+                            <div class="contact-icon">
+                                <img
+                                    src="./images/phone.png"
+                                    alt=""
+                                    srcset=""
+                                />
+
+                                <i class="fas fa-phone"></i>
+                            </div>
+                            <div class="contact-details">
+                                <p><strong>Телефон:</strong></p>
+                                <p>+7 (843) 717-81-18</p>
+                                <p>Александр Шувалов: +7 903 341 16 92</p>
+                            </div>
+                        </div>
+
+                        <div class="contact-item">
+                            <div class="contact-icon">
+                                <img
+                                    src="./images/email.png"
+                                    alt=""
+                                    srcset=""
+                                />
+                                <i class="fas fa-envelope"></i>
+                            </div>
+                            <div class="contact-details">
+                                <p><strong>Email:</strong></p>
+                                <p>eo9328@yandex.ru</p>
+                            </div>
+                        </div>
+
+                        <div class="contact-item">
+                            <div class="contact-icon">
+                                <img
+                                    src="./images/site.png"
+                                    alt=""
+                                    srcset=""
+                                />
+                                <i class="fas fa-globe"></i>
+                            </div>
+                            <div class="contact-details">
+                                <p><strong>Сайт:</strong></p>
+                                <p>eokzn.ru</p>
+                            </div>
+                        </div>
+
+                        <div class="contact-item">
+                            <div class="contact-icon">
+                                <img
+                                    src="./images/work-hourse.png"
+                                    alt=""
+                                    srcset=""
+                                />
+                                <i class="fas fa-clock"></i>
+                            </div>
+                            <div class="contact-details">
+                                <p><strong>Режим работы:</strong></p>
+                                <p>Пн-Пт: 9:00-18:00</p>
+                            </div>
+                        </div>
+
+                        <div class="contact-item">
+                            <div class="contact-icon">
+                                <img
+                                    src="./images/bill.png"
+                                    alt=""
+                                    srcset=""
+                                />
+                                <i class="fas fa-id-card"></i>
+                            </div>
+                            <div class="contact-details">
+                                <p><strong>Реквизиты:</strong></p>
+                                <p>ИП Залялютдинов Марсель Дамирович</p>
+                                <p>ИНН: 165503406960</p>
+                                <p>ОГРНИП: 323169000026362</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="contact-map">
+                        <iframe
+                            src="https://yandex.ru/map-widget/v1/?um=constructor%3A1a8d6e1b7b0b0b0b0b0b0b0b0b0b0b0b0b0&amp;source=constructor"
+                            width="100%"
+                            height="100%"
+                            frameborder="0"
+                        ></iframe>
+                    </div>
+                </div>
+                <div class="cta-buttons">
+                    <button class="btn" onclick="openModal('consultation')">
+                        Получить консультацию
+                    </button>
+                </div>
+            </div>
+        </section>
+
+        <!-- Footer -->
+        <footer class="footer">
+            <div class="container">
+                <div class="footer-container">
+                    <div class="footer-about">
+                        <div class="logo-container">
+                            <img
+                                class="company-logo"
+                                src="images/logo.png"
+                                alt="Easy Office Logo"
+                            />
+                        </div>
+                        <p>
+                            Управление коммерческой недвижимостью в Казани и
+                            Республике Татарстан. Профессиональный подход с 2006
+                            года.
+                        </p>
+                    </div>
+
+                    <div class="footer-services">
+                        <h3 class="footer-heading">Услуги</h3>
+                        <ul class="footer-links">
+                            <li>
+                                <a href="#">Управление офисной недвижимостью</a>
+                            </li>
+                            <li>
+                                <a href="#"
+                                    >Управление торговой недвижимостью</a
+                                >
+                            </li>
+                            <li>
+                                <a href="#"
+                                    >Управление складской недвижимостью</a
+                                >
+                            </li>
+                            <li>
+                                <a href="#"
+                                    >Управление производственной
+                                    недвижимостью</a
+                                >
+                            </li>
+                            <li>
+                                <a href="#">Управление земельными участками</a>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div class="footer-contacts">
+                        <h3 class="footer-heading">Контакты</h3>
+                        <div class="contact-item">
+                            <i class="fas fa-phone"></i>
+                            <span>+7 (843) 717-81-18</span>
+                        </div>
+                        <div class="contact-item">
+                            <i class="fas fa-map-marker-alt"></i>
+                            <span>г.Казань, пр-кт Ф.Амирхана, 21, 2 этаж</span>
+                        </div>
+                        <div class="contact-item">
+                            <i class="fas fa-envelope"></i>
+                            <span>eo9328@yandex.ru</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="footer-bottom">
+                    <p>
+                        © 2023 Easy Office. Управление коммерческой
+                        недвижимостью. Все права защищены.
+                    </p>
+                </div>
+            </div>
+        </footer>
+
+        <!-- Telegram Button -->
+        <button
+            onclick="openModal('consultation')"
+            class="telegram-button"
+            target="_blank"
+            title="Связаться через Telegram"
+        >
+            <i class="fab fa-telegram-plane telegram-icon"></i>
+            <img 
+                src="images/telegram_logo.png" 
+                alt="Telegram Icon" 
+                class="telegram-img" 
+            />
+            <span class="telegram-text">Написать в Telegram</span>
+        </button>
+
+        <!-- Modals -->
+        <div id="consultation-modal" class="modal">
+            <div class="modal-content">
+                <span class="close-modal" onclick="closeModal('consultation')"
+                    >&times;</span
+                >
+                <h2>Получить консультацию</h2>
+                <form id="consultation-form">
+                    <div class="form-group">
+                        <label for="consult-name">Ваше имя </label>
+                        <input type="text" id="consult-name" required />
+                    </div>
+                    <div class="form-group">
+                        <label for="consult-phone">Телефон </label>
+                        <input type="tel" id="consult-phone" required />
+                    </div>
+                    <div class="form-group">
+                        <label for="consult-email">Email</label>
+                        <input type="email" id="consult-email" />
+                    </div>
+                    <div class="form-group">
+                        <label for="consult-message">Сообщение</label>
+                        <textarea
+                            id="consult-message"
+                            rows="4"
+                            placeholder="Опишите ваш вопрос или объект"
+                        ></textarea>
+                    </div>
+                    <button type="submit" class="btn">Отправить заявку</button>
+                </form>
+            </div>
+        </div>
+
+        <div id="analysis-modal" class="modal">
+            <div class="modal-content">
+                <span class="close-modal" onclick="closeModal('analysis')"
+                    >&times;</span
+                >
+                <h2>Получить анализ объекта</h2>
+                <form id="analysis-form">
+                    <div class="form-group">
+                        <label for="analysis-name">Ваше имя </label>
+                        <input type="text" id="analysis-name" required />
+                    </div>
+                    <div class="form-group">
+                        <label for="analysis-phone">Телефон </label>
+                        <input type="tel" id="analysis-phone" required />
+                    </div>
+                    <div class="form-group">
+                        <label for="analysis-email">Email</label>
+                        <input type="email" id="analysis-email" />
+                    </div>
+                    <div class="form-group">
+                        <label for="analysis-object">Тип объекта </label>
+                        <select id="analysis-object" required>
+                            <option value="">Выберите тип объекта</option>
+                            <option value="Офисная">Офисная</option>
+                            <option value="Торговая">Торговая</option>
+                            <option value="Складская">Складская</option>
+                            <option value="Производственная">
+                                Производственная
+                            </option>
+                            <option value="Земельный участок">
+                                Земельный участок
+                            </option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="analysis-area">Площадь, м² </label>
+                        <input type="number" id="analysis-area" required />
+                    </div>
+                    <div class="form-group">
+                        <label for="analysis-location">Местоположение </label>
+                        <input type="text" id="analysis-location" required />
+                    </div>
+                    <div class="form-group">
+                        <label for="analysis-condition"
+                            >Состояние объекта</label
+                        >
+                        <textarea
+                            id="analysis-condition"
+                            rows="3"
+                            placeholder="Опишите текущее состояние объекта"
+                        ></textarea>
+                    </div>
+                    <button type="submit" class="btn">Получить анализ</button>
+                </form>
+            </div>
+        </div>
+
+        <div id="brokers-modal" class="modal">
+            <div class="modal-content">
+                <span class="close-modal" onclick="closeModal('brokers')"
+                    >&times;</span
+                >
+                <h2>Сотрудничество с брокерами</h2>
+                <form id="brokers-form">
+                    <div class="form-group">
+                        <label for="brokers-name">Ваше имя </label>
+                        <input type="text" id="brokers-name" required />
+                    </div>
+                    <div class="form-group">
+                        <label for="brokers-phone">Телефон </label>
+                        <input type="tel" id="brokers-phone" required />
+                    </div>
+                    <div class="form-group">
+                        <label for="brokers-email">Email </label>
+                        <input type="email" id="brokers-email" required />
+                    </div>
+                    <div class="form-group">
+                        <label for="brokers-company">Компания</label>
+                        <input type="text" id="brokers-company" />
+                    </div>
+                    <div class="form-group">
+                        <label for="brokers-message">Сообщение</label>
+                        <textarea
+                            id="brokers-message"
+                            rows="4"
+                            placeholder="Расскажите о вашем предложении"
+                        ></textarea>
+                    </div>
+                    <button type="submit" class="btn">Отправить заявку</button>
+                </form>
+            </div>
+        </div>
+
+        <script>
+            // Mobile menu toggle
+            const menuToggle = document.getElementById("menuToggle");
+            const menuClose = document.getElementById("menuClose");
+            const mainNav = document.getElementById("mainNav");
+
+            function toggleMenu() {
+                const isActive = mainNav.classList.toggle("active");
+                document.body.style.overflow = isActive ? "hidden" : "auto";
+            }
+
+            menuToggle.addEventListener("click", toggleMenu);
+            menuClose.addEventListener("click", toggleMenu);
+
+            // Close menu when clicking outside
+            document.addEventListener("click", (e) => {
+                if (
+                    mainNav.classList.contains("active") &&
+                    !mainNav.contains(e.target) &&
+                    !menuToggle.contains(e.target)
+                ) {
+                    toggleMenu();
+                }
+            });
+
+            // Close menu when clicking on links
+            document.querySelectorAll(".main-nav a").forEach((link) => {
+                link.addEventListener("click", toggleMenu);
+            });
+
+            // Modal functions
+            function openModal(type) {
+                document
+                    .getElementById(`${type}-modal`)
+                    .classList.add("active");
+                document.body.style.overflow = "hidden";
+            }
+
+            function closeModal(type) {
+                document
+                    .getElementById(`${type}-modal`)
+                    .classList.remove("active");
+                document.body.style.overflow = "auto";
+            }
+
+            // Close modal when clicking outside
+            document.querySelectorAll(".modal").forEach((modal) => {
+                modal.addEventListener("click", (e) => {
+                    if (e.target === modal) {
+                        modal.classList.remove("active");
+                        document.body.style.overflow = "auto";
+                    }
+                });
+            });
+
+            // Cases slider - modified to show one case at a time
+            let currentCaseIndex = 0;
+            const caseCards = document.querySelectorAll(".case-card");
+            const casesGrid = document.querySelector(".cases-grid");
+
+            function updateCasesDisplay() {
+                caseCards.forEach((card, index) => {
+                    if (index === currentCaseIndex) {
+                        card.style.display = "flex";
+                    } else {
+                        card.style.display = "none";
+                    }
+                });
+            }
+
+            function moveCases(direction) {
+                currentCaseIndex += direction;
+                if (currentCaseIndex < 0) currentCaseIndex = 0;
+                if (currentCaseIndex > caseCards.length - 1)
+                    currentCaseIndex = caseCards.length - 1;
+                updateCasesDisplay();
+            }
+
+            // Reviews slider
+            let currentReviewIndex = 0;
+            const reviewCards = document.querySelectorAll(".review-card");
+            const reviewsTrack = document.getElementById("reviewsTrack");
+
+            function moveReviews(direction) {
+                currentReviewIndex += direction;
+                if (currentReviewIndex < 0) currentReviewIndex = 0;
+                if (currentReviewIndex > reviewCards.length - 1)
+                    currentReviewIndex = reviewCards.length - 1;
+
+                const offset =
+                    -currentReviewIndex * (reviewCards[0].offsetWidth + 20);
+                reviewsTrack.style.transform = `translateX(${offset}px)`;
+            }
+
+            // Form submission
+            document.querySelectorAll("form").forEach((form) => {
+                form.addEventListener("submit", function (e) {
+                    e.preventDefault();
+                    alert(
+                        "Спасибо! Ваша заявка отправлена. Мы свяжемся с вами в ближайшее время."
+                    );
+                    form.reset();
+                    const modalType = form.id.replace("-form", "");
+                    closeModal(modalType);
+                });
+            });
+
+            // Initialize
+            document.addEventListener("DOMContentLoaded", function () {
+                updateCasesDisplay();
+
+                // Responsive adjustments - show one on all sizes
+                function handleResize() {
+                    updateCasesDisplay();
+                }
+
+                window.addEventListener("resize", handleResize);
+                handleResize();
+            });
+
+            // Smooth scrolling for anchor links
+            document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
+                anchor.addEventListener("click", function (e) {
+                    e.preventDefault();
+                    const targetId = this.getAttribute("href");
+                    if (targetId === "#") return;
+
+                    const targetElement = document.querySelector(targetId);
+                    if (targetElement) {
+                        window.scrollTo({
+                            top: targetElement.offsetTop - 80,
+                            behavior: "smooth",
+                        });
+                    }
+                });
+            });
+        </script>
+        <script src="scripts.js"></script>
+    </body>
+</html>
