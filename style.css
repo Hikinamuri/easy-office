@@ -31,7 +31,6 @@ body {
 
 .container {
     width: 100%;
-    max-width: 1200px;
     margin: 0 auto;
     padding: 0 20px;
 }
@@ -239,6 +238,7 @@ a:hover {
 
 /* Telegram Button */
 @keyframes bounce {
+
     0%,
     20%,
     50%,
@@ -293,10 +293,13 @@ a:hover {
 
 /* Стили для картинки (мобильная версия) */
 .telegram-img {
-    display: none; /* Скрыто по умолчанию (десктоп) */
-    width: 24px;   /* Фиксированный размер для круглой кнопки */
+    display: none;
+    /* Скрыто по умолчанию (десктоп) */
+    width: 24px;
+    /* Фиксированный размер для круглой кнопки */
     height: 24px;
-    object-fit: contain; /* Сохраняет пропорции */
+    object-fit: contain;
+    /* Сохраняет пропорции */
 }
 
 .telegram-text {
@@ -312,7 +315,8 @@ a:hover {
         padding: 12px;
         border-radius: 50%;
         border: none;
-        gap: 0; /* Убираем gap, т.к. только картинка */
+        gap: 0;
+        /* Убираем gap, т.к. только картинка */
     }
 
     /* В мобильной: скрываем иконку, показываем картинку */
@@ -321,8 +325,10 @@ a:hover {
     }
 
     .telegram-img {
-        display: block; /* Показываем картинку */
-        margin: 0 auto; /* Центрируем в кнопке */
+        display: block;
+        /* Показываем картинку */
+        margin: 0 auto;
+        /* Центрируем в кнопке */
     }
 }
 
@@ -330,27 +336,31 @@ a:hover {
 .hero {
     background: url('images/Header_Girl1_img.webp');
     background-size: cover;
-    background-attachment: unset;
+    background-position: 5% center;
+    background-repeat: no-repeat;
     color: var(--white);
     padding: 80px 0 60px;
     position: relative;
-    overflow: hidden;
     min-height: 600px;
+    height: 90vh;
 }
-
 .hero-container {
     display: flex;
     align-items: center;
     justify-content: flex-end;
-    max-width: 1500px;
     margin: 0 auto;
     padding: 0 20px;
 }
 
 .hero-content {
-    max-width: 400px;
+    max-width: 500px;
     text-align: right;
-    margin-right: -70px;
+    padding: 40px;
+    /* background: rgba(0, 0, 0, 0.6); */
+    border-radius: 10px;
+    margin-right: 0;
+    position: relative;
+    z-index: 2;
 }
 
 .hero-main-heading {
@@ -388,6 +398,7 @@ a:hover {
     gap: 15px;
     margin-top: 50px;
     justify-content: center;
+    padding: 0 20px;
 }
 
 .hero-category {
@@ -400,90 +411,82 @@ a:hover {
     border: 1px solid rgba(233, 185, 73, 0.3);
 }
 
-.btn {
-    padding: 12px 25px;
-    background: orange;
-    color: white;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    font-weight: 600;
+/* Адаптивность для hero */
+@media (max-width: 1200px) {
+    .hero-container {
+        max-width: 100%;
+    }
 }
 
-.btn-outline {
-    background: transparent;
-    border: 2px solid orange;
-    color: orange;
-}
-
-/* Адаптивность */
 @media (max-width: 1024px) {
     .hero {
-        min-height: 500px;
-        /* Уменьшаем высоту для средних экранов */
-        background-attachment: scroll;
-        /* Отключаем fixed для мобильных */
-    }
-
-    .hero-container {
-        gap: 20px;
-    }
-
-    .hero-main-heading {
-        font-size: 2.5rem;
-    }
-
-    .hero-sub-heading {
-        font-size: 1.5rem;
-    }
-
-    .hero-image {
-        margin-left: 50px;
-        /* Уменьшаем смещение вправо */
-    }
-
-    .hero-image h1 {
-        font-size: 2.5rem;
-    }
-
-    .hero-image h2 {
-        font-size: 2rem;
+        background-position: 10% center;
+        /* Сдвигаем для планшетов */
     }
 }
 
-@media (max-width: 576px) {
+@media (max-width: 768px) {
     .hero {
-        background-position: center top;
         padding: 60px 0 40px;
-        min-height: 400px;
+        min-height: 500px;
+        background-position: 15% center;
+        /* Сдвигаем для мобильных */
     }
 
     .hero-container {
-        flex-direction: column;
-        align-items: flex-start;
-        gap: 20px;
-        text-align: left;
+        justify-content: center;
     }
 
     .hero-content {
         max-width: 100%;
-        text-align: left;
+        text-align: center;
+        margin-right: 0;
+        padding: 30px 20px;
     }
 
-    .hero-image {
-        margin-left: 0;
-        text-align: left;
+    .hero-main-heading {
+        font-size: 1.8rem;
+        text-align: center;
     }
 
-    .hero-main-heading,
-    .hero-description,
-    .hero-image h1,
-    .hero-image h2 {
-        text-align: left;
+    .hero-description {
+        text-align: center;
+        font-size: 1rem;
     }
 
     .hero-cta {
-        justify-content: flex-start;
+        justify-content: center;
+    }
+
+    .hero-categories {
+        gap: 10px;
+        margin-top: 30px;
+    }
+
+    .hero-category {
+        font-size: 0.8rem;
+        padding: 6px 12px;
+    }
+}
+
+@media (max-width: 480px) {
+    .hero {
+        background-position: 20% center;
+        /* Сдвигаем для маленьких экранов */
+    }
+
+    .hero-main-heading {
+        font-size: 1.5rem;
+    }
+
+    .hero-cta {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .btn {
+        width: 100%;
+        max-width: 250px;
     }
 }
 
@@ -1100,36 +1103,25 @@ a:hover {
     box-shadow: 0 0 0 3px rgba(233, 185, 73, 0.3);
 }
 
-/* Responsive Design */
-@media (max-width: 1024px) {
-    .hero-main-heading {
-        font-size: 2.5rem;
-    }
-
-    .hero-sub-heading {
-        font-size: 1.5rem;
-    }
-
-    .review-card {
-        flex: 0 0 calc(50% - 20px);
-    }
-}
-
 @media (max-width: 768px) {
 
     .header-container {
         display: flex;
-        justify-content: space-between; /* Распределяем логотип слева и кнопку меню справа */
+        justify-content: space-between;
+        /* Распределяем логотип слева и кнопку меню справа */
         /* Убираем padding-left: 0, чтобы применялся отступ по умолчанию из .container (20px слева и справа) */
     }
-    
+
     .logo-container {
-        justify-content: flex-start; /* Логотип и текст выровнены слева */
+        justify-content: flex-start;
+        /* Логотип и текст выровнены слева */
     }
 
     .menu-toggle {
-        display: block; /* Показываем кнопку меню */
-        margin-right: 0; /* Убираем лишний отступ справа, используем отступ контейнера */
+        display: block;
+        /* Показываем кнопку меню */
+        margin-right: 0;
+        /* Убираем лишний отступ справа, используем отступ контейнера */
     }
 
     .menu-close {
@@ -1181,7 +1173,7 @@ a:hover {
     .hero {
         background: url('images/Header_Girl1_img.webp');
         background-size: cover;
-        background-position: 0% 50%;  
+        background-position: 0% 50%;
         background-position: 110% 50%;
         background-attachment: unset;
         color: var(--white);
@@ -1202,9 +1194,12 @@ a:hover {
     .hero-content {
         display: flex;
         flex-direction: column;
-        align-items: flex-end; /* Прижимает все дочерние элементы (заголовки, описание) к правому краю контейнера */
-        max-width: 400px; /* Или твой текущий max-width */
-        text-align: right; /* Дополнительно выравнивает текст внутри элементов справа */
+        align-items: flex-end;
+        /* Прижимает все дочерние элементы (заголовки, описание) к правому краю контейнера */
+        max-width: 400px;
+        /* Или твой текущий max-width */
+        text-align: right;
+        /* Дополнительно выравнивает текст внутри элементов справа */
         margin-right: 20px;
     }
 
@@ -1214,8 +1209,10 @@ a:hover {
         /* Убираем justify-content, т.к. теперь оно работает на родителе */
         text-align: right;
         font-size: 1.5rem;
-        max-width: 250px; /* Ограничиваем ширину, чтобы не растягивалось */
-        width: 100%; /* Чтобы элемент занимал всю ширину родителя и прижимался справа */
+        max-width: 250px;
+        /* Ограничиваем ширину, чтобы не растягивалось */
+        width: 100%;
+        /* Чтобы элемент занимал всю ширину родителя и прижимался справа */
     }
 
     .hero-description {
@@ -1223,7 +1220,8 @@ a:hover {
         text-align: right;
         font-size: 1rem;
         max-width: 250px;
-        width: 100%; /* Аналогично, для прижатия */
+        width: 100%;
+        /* Аналогично, для прижатия */
     }
 
     .hero-cta {
@@ -1288,7 +1286,7 @@ a:hover {
     }
 
 
-    .footer-links{
+    .footer-links {
         text-align: left;
         margin-left: 15px;
     }
@@ -1308,20 +1306,16 @@ a:hover {
 }
 
 @media (max-width: 576px) {
-
     .header-container {
         display: flex;
-        justify-content: space-between; /* Распределяем логотип слева и кнопку меню справа */
-        /* Убираем padding-left: 0, чтобы применялся отступ по умолчанию из .container (20px слева и справа) */
+        justify-content: space-between;
     }
-    
     .logo-container {
-        justify-content: flex-start; /* Логотип и текст выровнены слева */
+        justify-content: flex-start;
     }
-
     .menu-toggle {
-        display: block; /* Показываем кнопку меню */
-        margin-right: 0; /* Убираем лишний отступ справа, используем отступ контейнера */
+        display: block;
+        margin-right: 0;
     }
 
     .menu-close {
@@ -1332,10 +1326,10 @@ a:hover {
         font-size: 2rem;
     }
 
-   .hero {
+    .hero {
         background: url('images/Header_Girl1_img.webp');
         background-size: cover;
-        background-position: 0% 50%;  
+        background-position: 0% 50%;
         background-position: 80% 50%;
         background-attachment: unset;
         color: var(--white);
@@ -1356,10 +1350,12 @@ a:hover {
     .hero-content {
         display: flex;
         flex-direction: column;
-        align-items: flex-end; /* Прижимает все дочерние элементы (заголовки, описание) к правому краю контейнера */
-        max-width: 400px; /* Или твой текущий max-width */
-        text-align: right; /* Дополнительно выравнивает текст внутри элементов справа */
-        margin-right: 20px;
+        align-items: flex-end;
+        max-width: 400px;
+        text-align: right;
+        margin-right: 0;
+        padding: 20px 5px;
+        margin-top: 30px;
     }
 
     .hero-main-heading,
@@ -1368,8 +1364,10 @@ a:hover {
         /* Убираем justify-content, т.к. теперь оно работает на родителе */
         text-align: right;
         font-size: 1.5rem;
-        max-width: 250px; /* Ограничиваем ширину, чтобы не растягивалось */
-        width: 100%; /* Чтобы элемент занимал всю ширину родителя и прижимался справа */
+        max-width: 250px;
+        /* Ограничиваем ширину, чтобы не растягивалось */
+        width: 100%;
+        /* Чтобы элемент занимал всю ширину родителя и прижимался справа */
     }
 
     .hero-description {
@@ -1377,7 +1375,8 @@ a:hover {
         text-align: right;
         font-size: 1rem;
         max-width: 250px;
-        width: 100%; /* Аналогично, для прижатия */
+        width: 100%;
+        /* Аналогично, для прижатия */
     }
 
     .hero-cta {
@@ -1387,6 +1386,7 @@ a:hover {
     .hero-categories {
         display: none;
     }
+
     .btn {
         width: 100%;
     }
