@@ -107,7 +107,12 @@ a:hover {
 }
 
 .text-center {
+    display: flex;
     text-align: center;
+    gap: 15px;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
 
 .mb-4 {
@@ -126,6 +131,7 @@ a:hover {
 
 .header-container {
     display: flex;
+    position: relative;
     justify-content: space-between;
     align-items: center;
     flex-wrap: wrap;
@@ -344,6 +350,7 @@ a:hover {
     min-height: 600px;
     height: 90vh;
 }
+
 .hero-container {
     display: flex;
     align-items: center;
@@ -398,7 +405,10 @@ a:hover {
     gap: 15px;
     margin-top: 50px;
     justify-content: center;
+    align-items: center;
     padding: 0 20px;
+    position: absolute;
+    bottom: 30px;
 }
 
 .hero-category {
@@ -1310,9 +1320,11 @@ a:hover {
         display: flex;
         justify-content: space-between;
     }
+
     .logo-container {
         justify-content: flex-start;
     }
+
     .menu-toggle {
         display: block;
         margin-right: 0;
