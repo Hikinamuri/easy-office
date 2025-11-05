@@ -362,6 +362,20 @@ a:hover {
     padding: 0 20px;
 }
 
+
+.hero-logo {
+    position: absolute;
+    left: 20px;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 3;
+}
+
+.hero-logo img {
+    max-width: 25%;
+    height: auto;
+}
+
 .hero-content {
     max-width: 500px;
     text-align: right;
@@ -424,12 +438,60 @@ a:hover {
     border: 1px solid rgba(233, 185, 73, 0.3);
 }
 
+.hero1{
+    display: none;
+}
+
 /* Адаптивность для hero */
 @media (max-width: 1200px) {
-    .hero-container {
-        max-width: 100%;
+    .hero {
+        background: url('images/forPhone.jpg') !important;
+        background-size: 100% 100% !important; /* Изменено: растягивает по высоте на 100% контейнера (ширина подстраивается автоматически, без искажений; если нужно с искажением — 100% 100%) */
+        background-position: center center !important;
+        background-repeat: no-repeat !important;
+        color: var(--white) !important;
+        padding: 80px 0 60px !important;
+        position: relative !important;
+        min-height: 200px;
+        height: 100vh; /* Если нужно ещё выше — измени на 120vh или calc(100vh + 100px) */
+    }
+    .hero-logo{
+        display: none;
+    }
+
+    .footer-photo{
+        background-color: var(--white);;
+    }
+
+    .hero1{
+        background-color: white;
+        display: block;
+    }
+
+    .hero-container1 {
+        background: url('images/Header_Girl1_img.webp');
+        background-position: 100% 100% !important; /* Сдвиг влево: уменьшите значение (например, 20% или 0% для полного прижатия слева), вертикально остаётся снизу */
+        background-size: 135% 100% !important; /* Растяжка по ширине: увеличьте первое значение (например, 120% или 150%), чтобы изображение стало шире контейнера; высота остаётся 90% */
+        background-repeat: no-repeat !important;
+        height: 50vh;
+        position: relative;
+    }
+
+    .hero-logo1 {
+        position: absolute;
+        left: 65%;
+        top: 50%;
+        transform: translateY(-50%);
+        z-index: 999 !important;
+    }
+
+    .hero-logo1 img {
+        max-width: 55%;
+        height: auto;
+        z-index: 999 !important;
     }
 }
+
 
 @media (max-width: 1024px) {
     .hero {
@@ -443,11 +505,17 @@ a:hover {
         padding: 60px 0 40px;
         min-height: 500px;
         background-position: 15% center;
-        /* Сдвигаем для мобильных */
     }
 
-    .hero-container {
-        justify-content: center;
+    .hero-logo {
+        position: static;
+        transform: none;
+        margin-bottom: 20px;
+        text-align: center;
+    }
+
+    .hero-logo img {
+        width: 150px; /* Меньше на мобильных */
     }
 
     .hero-content {
@@ -481,7 +549,6 @@ a:hover {
         padding: 6px 12px;
     }
 }
-
 @media (max-width: 480px) {
     .hero {
         background-position: 20% center;
@@ -577,7 +644,6 @@ a:hover {
 .pains-list i {
     color: var(--accent);
     font-size: 1.2rem;
-    margin-top: 3px;
     flex-shrink: 0;
     font-family: 'Roboto', sans-serif;
 }
@@ -632,6 +698,9 @@ a:hover {
     background: orange;
     border-radius: 70px;
     padding: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .icon-block h3 {
@@ -914,6 +983,11 @@ a:hover {
     img {
         width: 20px;
         height: 20px;
+        object-fit: contain;
+    }
+
+    i {
+        font-size: 1.2rem;
     }
 }
 
@@ -1041,6 +1115,8 @@ a:hover {
     padding-left: 5px;
 }
 
+
+
 .footer-bottom {
     text-align: center;
     padding-top: 30px;
@@ -1138,10 +1214,18 @@ a:hover {
         background-position: center center !important;
         background-repeat: no-repeat !important;
         color: var(--white) !important;
-        padding: 80px 0 60px !important;
+        padding: 140px 20px;
         position: relative !important;
         min-height: 200px;
-        height: 100vh; /* Если нужно ещё выше — измени на 120vh или calc(100vh + 100px) */
+        height: 100vh;
+    }
+    .hero-logo{
+        display: none;
+    }
+    .hero-content {
+        max-width: 50%;
+        text-align: center;
+        margin-right: 0;
     }
 
     .header-container {
@@ -1207,39 +1291,6 @@ a:hover {
         order: 2;
         margin-left: 0;
         margin-right: 10px;
-    }
-
-    .hero {
-        background: url('images/Header_Girl1_img.webp');
-        background-size: cover;
-        background-position: 0% 50%;
-        background-position: 110% 50%;
-        background-attachment: unset;
-        color: var(--white);
-        padding: 80px 0 20px;
-        position: relative;
-        overflow: hidden;
-        min-height: 600px;
-    }
-
-    .hero-container {
-        display: flex;
-        align-items: flex-end;
-        justify-content: flex-end;
-        margin: 0 auto;
-        padding: 20px 5px;
-    }
-
-    .hero-content {
-        display: flex;
-        flex-direction: column;
-        align-items: flex-end;
-        /* Прижимает все дочерние элементы (заголовки, описание) к правому краю контейнера */
-        max-width: 400px;
-        /* Или твой текущий max-width */
-        text-align: right;
-        /* Дополнительно выравнивает текст внутри элементов справа */
-        margin-right: 20px;
     }
 
     .hero-main-heading,
@@ -1315,6 +1366,39 @@ a:hover {
         justify-content: center;
     }
 
+
+    .footer-photo{
+        background-color: var(--white);;
+    }
+
+    .hero1{
+        background-color: white;
+        display: block;
+    }
+
+    .hero-container1 {
+        background: url('images/Header_Girl1_img.webp');
+        background-position: 100% 100% !important; /* Сдвиг влево: уменьшите значение (например, 20% или 0% для полного прижатия слева), вертикально остаётся снизу */
+        background-size: 135% 100% !important; /* Растяжка по ширине: увеличьте первое значение (например, 120% или 150%), чтобы изображение стало шире контейнера; высота остаётся 90% */
+        background-repeat: no-repeat !important;
+        height: 50vh;
+        position: relative;
+    }
+
+    .hero-logo1 {
+        position: absolute;
+        left: 65%;
+        top: 50%;
+        transform: translateY(-50%);
+        z-index: 999 !important;
+    }
+
+    .hero-logo1 img {
+        max-width: 75%;
+        height: auto;
+         z-index: 999 !important;
+    }
+
     .footer-container {
         grid-template-columns: 1fr;
         text-align: center;
@@ -1351,6 +1435,7 @@ a:hover {
         position: relative !important;
         min-height: 200px;
         height: 100vh; /* Если нужно ещё выше — измени на 120vh или calc(100vh + 100px) */
+        justify-content: center;
     }
 
     .header-container {
@@ -1375,25 +1460,16 @@ a:hover {
         font-size: 2rem;
     }
 
-    .hero {
-        background: url('images/Header_Girl1_img.webp');
-        background-size: cover;
-        background-position: 0% 50%;
-        background-position: 80% 50%;
-        background-attachment: unset;
-        color: var(--white);
-        padding: 80px 0 20px;
-        position: relative;
-        overflow: hidden;
-        min-height: 600px;
-    }
-
     .hero-container {
         display: flex;
         align-items: flex-end;
         justify-content: flex-end;
         margin: 0 auto;
-        padding: 20px 5px;
+        padding: 70px 20px;
+    }
+
+    .hero-logo {
+        display: none;
     }
 
     .hero-content {
