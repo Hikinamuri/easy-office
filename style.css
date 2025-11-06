@@ -122,7 +122,7 @@ a:hover {
 /* Header */
 .site-header {
     background: var(--primary);
-    padding: 15px 0;
+    padding: 5px 0;
     position: sticky;
     top: 0;
     z-index: 1000;
@@ -147,8 +147,8 @@ a:hover {
 }
 
 .company-logo {
-    width: 75px;
-    height: 75px;
+    /* width: 75px; */
+    height: 50px;
     object-fit: contain;
 }
 
@@ -693,14 +693,11 @@ a:hover {
 .icon-img {
     width: 70px;
     height: 70px;
-    object-fit: contain;
+    object-fit: cover;
     margin-bottom: 20px;
     background: orange;
-    border-radius: 70px;
+    border-radius: 50%;
     padding: 10px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
 }
 
 .icon-block h3 {
@@ -844,6 +841,10 @@ a:hover {
     h3,
     p {
         color: white;
+    }
+
+    h3 {
+        font-size: 18px;
     }
 }
 
@@ -1379,7 +1380,7 @@ a:hover {
     .hero-container1 {
         background: url('images/Header_Girl1_img.webp');
         background-position: 100% 100% !important; /* Сдвиг влево: уменьшите значение (например, 20% или 0% для полного прижатия слева), вертикально остаётся снизу */
-        background-size: 135% 100% !important; /* Растяжка по ширине: увеличьте первое значение (например, 120% или 150%), чтобы изображение стало шире контейнера; высота остаётся 90% */
+        background-size: 160% 100% !important; /* Растяжка по ширине: увеличьте первое значение (например, 120% или 150%), чтобы изображение стало шире контейнера; высота остаётся 90% */
         background-repeat: no-repeat !important;
         height: 50vh;
         position: relative;
@@ -1387,8 +1388,8 @@ a:hover {
 
     .hero-logo1 {
         position: absolute;
-        left: 65%;
-        top: 50%;
+        left: 60%;
+        top: 35%;
         transform: translateY(-50%);
         z-index: 999 !important;
     }
@@ -1462,8 +1463,8 @@ a:hover {
 
     .hero-container {
         display: flex;
-        align-items: flex-end;
-        justify-content: flex-end;
+        align-items: flex-start;
+        justify-content: flex-start;
         margin: 0 auto;
         padding: 70px 20px;
     }
@@ -1475,7 +1476,7 @@ a:hover {
     .hero-content {
         display: flex;
         flex-direction: column;
-        align-items: flex-end;
+        align-items: flex-start;
         max-width: 400px;
         text-align: right;
         margin-right: 0;
@@ -1486,7 +1487,7 @@ a:hover {
     .hero-image h1,
     .hero-image h2 {
         /* Убираем justify-content, т.к. теперь оно работает на родителе */
-        text-align: right;
+        text-align: left;
         font-size: 1.5rem;
         max-width: 250px;
         /* Ограничиваем ширину, чтобы не растягивалось */
@@ -1496,7 +1497,7 @@ a:hover {
 
     .hero-description {
         /* Убираем justify-content */
-        text-align: right;
+        text-align: left;
         font-size: 1rem;
         max-width: 250px;
         width: 100%;
@@ -1505,6 +1506,7 @@ a:hover {
 
     .hero-cta {
         flex-direction: column;
+        margin-top: 45px;
     }
 
     .hero-categories {
